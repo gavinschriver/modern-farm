@@ -12,10 +12,5 @@ const asparagusSeed = createAsparagus()
 const wheatSeed = createWheat()
 const potatoSeed = createPotato()
 
-console.log(soybeanSeed)
-console.log(cornSeed)
-console.log(sunflowerSeed)
-console.log(asparagusSeed)
-console.log(wheatSeed)
-console.log(potatoSeed)
+
 
