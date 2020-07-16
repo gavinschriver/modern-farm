@@ -12,11 +12,9 @@ const arrayOfPlants = usePlants()
 
 console.log(arrayOfPlants)
 
-for (const plant of arrayOfPlants) {
+arrayOfPlants.forEach((plant) => {
     if (Array.isArray(plant)) {
-      console.log(`You've got corn at row ${(arrayOfPlants.indexOf(plant) + 1)}`)
+        console.log(`youve got corn at row ${(arrayOfPlants.indexOf(plant) + 1)}`)
+        }
     }
-  }
-
-
-
+)
