@@ -1,20 +1,11 @@
-import {createCorn} from "./seeds/corn.js"
-import {createSoybean} from "./seeds/soybean.js"
-import {addPlant, usePlants} from "./field.js"
+// end of ch 1 instructions 
+import {createPlan} from "./plan.js"
+import { plantSeeds } from "./tractor.js"
+import { getPlants } from "./field.js"
 
-const soybeanSeed = createSoybean()
-const cornSeed = createCorn()
 
-addPlant(cornSeed)
-addPlant(soybeanSeed)
+const yearlyPlan = createPlan()
 
-const arrayOfPlants = usePlants()
+plantSeeds(yearlyPlan)
 
-console.log(arrayOfPlants)
-
-arrayOfPlants.forEach((plant) => {
-    if (Array.isArray(plant)) {
-        console.log(`youve got corn at row ${(arrayOfPlants.indexOf(plant) + 1)}`)
-        }
-    }
-)
+console.log(getPlants())
