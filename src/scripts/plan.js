@@ -1,9 +1,9 @@
-const types = ["Soybean", "Corn", "Asparagus", "Wheat", "Potato", "Sunflower"]
+const types = ["soybean", "corn", "asparagus", "wheat", "potato", "sunflower"]
 
-export const createPlan = () => {
-    const plan = [] //plan will be equal to an array with 3 sub-arrays, each holding 6 string values (randomly populated by that crazy thing below)
+export const createPlan = () => { // create a variable called createPlan, make it exportable, and assign it a  function that...
+    const plan = [] //... decalres a a var called plan and sets it to an empty array; 
 
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 3; index++) { 
         const row = []
         for (let j = 0; j < 6; j++) {
             row.push(crop.next().value)
@@ -11,8 +11,8 @@ export const createPlan = () => {
         plan.push(row)
     }
 
-    return plan
-}
+    return plan //invoking createPlan will return the var "plan", which will be equal to an array with 3 sub-arrays, each holding 6 string values (randomly populated by that crazy thing below) 
+}               //so wherever createPlan is invoked, the value will be an array (with sub subrays as its 3 index values) full of strings from the types array above
 
 
 
