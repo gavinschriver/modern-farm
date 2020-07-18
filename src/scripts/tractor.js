@@ -1,12 +1,11 @@
 // import addPlant and create functions
-import { addPlant } from "./field.js"; // grab addPlant function
+import { addPlant} from "./field.js"; // grab addPlant function
 import { createAsparagus } from "./seeds/asparagus.js";
 import { createCorn } from "./seeds/corn.js";
 import { createSunflower } from "./seeds/sunflower.js";
 import { createWheat } from "./seeds/wheat.js";
 import { createPotato } from "./seeds/potato.js";
 import { createSoybean } from "./seeds/soybean.js";
-
 
 export const plantSeeds = (plantingPlan) => { //define a function assigned to the var name plantSeeds which takes 1 parameter, named plantingPlan, which will be an array 
   plantingPlan.forEach( //for each array found in a plantingPlan argument...
@@ -15,7 +14,8 @@ export const plantSeeds = (plantingPlan) => { //define a function assigned to th
         (plant) => { // name each index item "plant", and then..
           switch (plant) {    
             case "asparagus":   //if "plant" is equal to "asparagus"...
-              addPlant(createAsparagus()); //invoke the addplant 
+              addPlant(createAsparagus());
+              //invoke the addplant 
               break;
             case "corn":
               addPlant(createCorn());
@@ -42,3 +42,10 @@ export const plantSeeds = (plantingPlan) => { //define a function assigned to th
 
 // this whole function is a LOOP that will step through every single individual plant string in the plan and 1) invoke its createFunction, which RETURNS AN OBJECT (or array, if its corn), then passes 
 // object into the addPLant function
+//import lets you USE a function somewhere, but that function is still scoped to/accessible in the file where its defined
+//--> so the function is being EXECUTED in the original file!!! right???
+// SO TEST for instance - if i just wrote
+// plants.push(createdAsparagus()) HERE, it would push to the plants array??
+
+
+//nope 
