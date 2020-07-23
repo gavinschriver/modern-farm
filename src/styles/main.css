@@ -18,6 +18,17 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(250,249,210);
+}
+
+.foodItem {
+    flex-basis: 20%;
+    text-align:center;
+}
+
 .blue {
     background-color: aliceblue;
 }

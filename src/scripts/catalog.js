@@ -1,7 +1,15 @@
 export const Catalog = (harvestedFood) => {
-  harvestedFood.forEach((food) => {
-    const targetArea = document.querySelector(".container");
+  const targetArea = document.querySelector(".container");
 
-    targetArea.innerHTML += `<h2>${food.type}</h2>`;
-  });
+  let unsortedFoodItems = [];
+
+  harvestedFood.forEach((foodObj) => unsortedFoodItems.push(foodObj.type));
+
+  const sortedFoodItems = unsortedFoodItems.sort();
+
+  sortedFoodItems.forEach(
+    (sortedFoodItem) =>
+      (targetArea.innerHTML += `<section class="foodItem">${sortedFoodItem}</section>
+  `)
+  );
 };
